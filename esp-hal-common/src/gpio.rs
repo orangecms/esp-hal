@@ -503,7 +503,7 @@ macro_rules! impl_output {
 
         impl<MODE> $pxi<MODE> {
             pub fn into_pull_up_input(self) -> $pxi<Input<PullUp>> {
-                self.init_input(false, false);
+                self.init_input(false, true);
                 $pxi { _mode: PhantomData }
             }
 
